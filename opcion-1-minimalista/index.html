@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Villaespai · Fisioterapia, Podología y Salud en Vilamarxant</title>
+<meta name="description" content="Clínica Villaespai en Vilamarxant (Valencia): fisioterapia, osteopatía, podología, nutrición, logopedia y psicología infanto-juvenil. Pide cita al 653 48 78 25.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['"Plus Jakarta Sans"','sans-serif']},colors:{med:{50:'#f0f7fb',100:'#dceef7',500:'#2b7fb0',600:'#1f6a96',700:'#185678'},sage:{100:'#e6f0ea',300:'#b5cfbf'}}}}}</script>
+</head>
+<body class="font-sans bg-white text-slate-700 antialiased">
+
+<!-- Header -->
+<header id="top" class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-100">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 font-bold text-slate-900"><span class="w-8 h-8 rounded-lg bg-med-500 text-white grid place-items-center"><i data-lucide="plus" class="w-5 h-5"></i></span>Villaespai</a>
+    <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-500">
+      <a href="#servicios" class="hover:text-med-600">Servicios</a><a href="#equipo" class="hover:text-med-600">Equipo</a><a href="#horario" class="hover:text-med-600">Horario</a><a href="#contacto" class="hover:text-med-600">Contacto</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button onclick="openModal()" class="bg-med-500 hover:bg-med-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">Pedir cita</button>
+      <button id="menuBtn" class="md:hidden p-2" aria-label="Abrir menú"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="hidden md:hidden border-t border-slate-100 px-5 py-3 flex-col gap-3 text-sm font-medium">
+    <a href="#servicios">Servicios</a><a href="#equipo">Equipo</a><a href="#horario">Horario</a><a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="max-w-6xl mx-auto px-5 py-16 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+  <div>
+    <p class="inline-flex items-center gap-2 text-xs font-semibold text-med-600 bg-med-50 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i>Vilamarxant, Valencia</p>
+    <h1 class="mt-6 text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">Salud integral,<br>con rigor y cercanía.</h1>
+    <p class="mt-6 text-lg text-slate-500 leading-relaxed">Fisioterapia, osteopatía, podología, nutrición, logopedia y psicología infanto-juvenil en un único centro. Profesionales colegiados y tratamientos basados en la evidencia.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <button onclick="openModal()" class="bg-med-500 hover:bg-med-600 text-white font-semibold px-6 py-3 rounded-lg inline-flex items-center gap-2"><i data-lucide="calendar-check" class="w-5 h-5"></i>Pedir cita</button>
+      <a href="tel:+34653487825" class="border border-slate-200 hover:border-med-500 font-semibold px-6 py-3 rounded-lg inline-flex items-center gap-2 text-slate-800"><i data-lucide="phone" class="w-5 h-5"></i>653 48 78 25</a>
+    </div>
+    <dl class="mt-12 grid grid-cols-3 gap-6 border-t border-slate-100 pt-8">
+      <div><dt class="text-2xl font-bold text-slate-900">5</dt><dd class="text-xs text-slate-400 mt-1">especialidades</dd></div>
+      <div><dt class="text-2xl font-bold text-slate-900">1</dt><dd class="text-xs text-slate-400 mt-1">centro, todo cerca</dd></div>
+      <div><dt class="text-2xl font-bold text-slate-900">100%</dt><dd class="text-xs text-slate-400 mt-1">trato personalizado</dd></div>
+    </dl>
+  </div>
+  <div class="relative">
+    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80" alt="Consulta clínica luminosa" class="rounded-2xl w-full h-[420px] object-cover bg-slate-100">
+    <div class="absolute -bottom-6 -left-4 md:-left-8 bg-white shadow-xl rounded-xl p-4 flex items-center gap-3 border border-slate-100">
+      <span class="w-10 h-10 rounded-full bg-sage-100 text-emerald-700 grid place-items-center"><i data-lucide="shield-check" class="w-5 h-5"></i></span>
+      <div><p class="text-sm font-semibold text-slate-900">Cita en menos de 48 h</p><p class="text-xs text-slate-400">Por teléfono o WhatsApp</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios" class="bg-slate-50 py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="max-w-xl"><p class="text-sm font-semibold text-med-600">Especialidades</p><h2 class="mt-2 text-3xl md:text-4xl font-bold text-slate-900">Todo lo que necesitas, en un mismo lugar</h2></div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="bg-white rounded-2xl p-7 border border-slate-100 hover:shadow-lg transition">
+        <i data-lucide="activity" class="w-8 h-8 text-med-500"></i>
+        <h3 class="mt-5 text-lg font-bold text-slate-900">Fisioterapia y Osteopatía</h3>
+        <ul class="mt-4 space-y-2 text-sm text-slate-500"><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Diatermia</li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Punción seca</li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Activación del nervio peroneo</li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Fisioterapia general y osteopatía</li></ul>
+      </article>
+      <article class="bg-white rounded-2xl p-7 border border-slate-100 hover:shadow-lg transition">
+        <i data-lucide="footprints" class="w-8 h-8 text-med-500"></i>
+        <h3 class="mt-5 text-lg font-bold text-slate-900">Podología</h3>
+        <ul class="mt-4 space-y-2 text-sm text-slate-500"><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Estudio de la pisada y plataforma de presiones</li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Plantillas personalizadas</li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Reconstrucción de uña</li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Cirugía MIS / fenol-alcohol para uña encarnada</li></ul>
+      </article>
+      <article class="bg-white rounded-2xl p-7 border border-slate-100 hover:shadow-lg transition">
+        <i data-lucide="apple" class="w-8 h-8 text-med-500"></i>
+        <h3 class="mt-5 text-lg font-bold text-slate-900">Nutrición</h3>
+        <ul class="mt-4 space-y-2 text-sm text-slate-500"><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Dietas personalizadas</li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Tratamiento de la microbiota</li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Abordaje del SIBO</li></ul>
+      </article>
+      <article class="bg-white rounded-2xl p-7 border border-slate-100 hover:shadow-lg transition">
+        <i data-lucide="message-circle" class="w-8 h-8 text-med-500"></i>
+        <h3 class="mt-5 text-lg font-bold text-slate-900">Logopedia</h3>
+        <ul class="mt-4 space-y-2 text-sm text-slate-500"><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Terapia miofuncional</li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Trastornos del habla y del lenguaje</li><li class="flex gap-2"><i data-lucide="user" class="w-4 h-4 text-med-500 shrink-0 mt-0.5"></i>Con Adrián Quiles</li></ul>
+      </article>
+      <article class="bg-white rounded-2xl p-7 border border-slate-100 hover:shadow-lg transition">
+        <i data-lucide="brain" class="w-8 h-8 text-med-500"></i>
+        <h3 class="mt-5 text-lg font-bold text-slate-900">Psicología</h3>
+        <ul class="mt-4 space-y-2 text-sm text-slate-500"><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Psicología infanto-juvenil</li><li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>Acompañamiento a familias</li><li class="flex gap-2"><i data-lucide="user" class="w-4 h-4 text-med-500 shrink-0 mt-0.5"></i>Con Alejandra Oliván Pascual</li></ul>
+      </article>
+      <article class="bg-med-500 text-white rounded-2xl p-7 flex flex-col justify-between">
+        <div><i data-lucide="calendar-heart" class="w-8 h-8"></i><h3 class="mt-5 text-lg font-bold">¿No sabes por dónde empezar?</h3><p class="mt-3 text-sm text-med-100">Cuéntanos qué te ocurre y te orientamos hacia el profesional adecuado.</p></div>
+        <a href="https://wa.me/34653487825?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Cl%C3%ADnica%20Villaespai" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 bg-white text-med-700 font-semibold px-4 py-2 rounded-lg w-fit"><i data-lucide="message-square" class="w-4 h-4"></i>Escríbenos</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Equipo -->
+<section id="equipo" class="max-w-6xl mx-auto px-5 py-20 grid md:grid-cols-2 gap-10 items-center">
+  <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80" alt="Profesional sanitario atendiendo" class="rounded-2xl w-full h-80 object-cover bg-slate-100">
+  <div>
+    <p class="text-sm font-semibold text-med-600">Equipo</p>
+    <h2 class="mt-2 text-3xl font-bold text-slate-900">Especialistas que trabajan en coordinación</h2>
+    <p class="mt-4 text-slate-500">Cada paciente cuenta con un plan coordinado entre disciplinas. Así evitamos desplazamientos innecesarios y conseguimos mejores resultados.</p>
+    <div class="mt-8 space-y-4">
+      <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-100"><span class="w-12 h-12 rounded-full bg-med-50 text-med-600 font-bold grid place-items-center">AQ</span><div><p class="font-semibold text-slate-900">Adrián Quiles</p><p class="text-sm text-slate-400">Logopeda · Terapia miofuncional</p></div></div>
+      <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-100"><span class="w-12 h-12 rounded-full bg-sage-100 text-emerald-700 font-bold grid place-items-center">AO</span><div><p class="font-semibold text-slate-900">Alejandra Oliván Pascual</p><p class="text-sm text-slate-400">Psicóloga infanto-juvenil</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Horario y contacto -->
+<section id="horario" class="bg-slate-50 py-20">
+  <div id="contacto" class="max-w-6xl mx-auto px-5 grid lg:grid-cols-3 gap-6">
+    <div class="bg-white rounded-2xl p-7 border border-slate-100">
+      <h3 class="font-bold text-slate-900 flex items-center gap-2"><i data-lucide="clock" class="w-5 h-5 text-med-500"></i>Horario</h3>
+      <ul class="mt-5 text-sm divide-y divide-slate-100">
+        <li class="flex justify-between py-3"><span>Lunes</span><span class="font-medium text-slate-900">10:00 – 14:00</span></li>
+        <li class="flex justify-between py-3"><span>Martes</span><span class="font-medium text-slate-900">10:00 – 20:00</span></li>
+        <li class="flex justify-between py-3"><span>Miércoles</span><span class="font-medium text-slate-900">10:00 – 14:00</span></li>
+        <li class="flex justify-between py-3"><span>Jueves</span><span class="font-medium text-slate-900">10:00 – 20:00</span></li>
+        <li class="flex justify-between py-3"><span>Viernes</span><span class="font-medium text-slate-900">10:00 – 14:00</span></li>
+        <li class="flex justify-between py-3 text-slate-400"><span>Sábado y domingo</span><span>Cerrado</span></li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-2xl p-7 border border-slate-100">
+      <h3 class="font-bold text-slate-900 flex items-center gap-2"><i data-lucide="contact" class="w-5 h-5 text-med-500"></i>Contacto</h3>
+      <ul class="mt-5 space-y-4 text-sm">
+        <li class="flex gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-slate-400 shrink-0"></i>C/ Villarroya, 44, Bajo<br>46191 Vilamarxant (Valencia)</li>
+        <li><a href="tel:+34653487825" class="flex gap-3 hover:text-med-600"><i data-lucide="phone" class="w-5 h-5 text-slate-400"></i>+34 653 48 78 25</a></li>
+        <li><a href="https://wa.me/34653487825" target="_blank" rel="noopener" class="flex gap-3 hover:text-med-600"><i data-lucide="message-square" class="w-5 h-5 text-slate-400"></i>WhatsApp cita previa</a></li>
+        <li><a href="mailto:villaespaiclinica@gmail.com" class="flex gap-3 hover:text-med-600 break-all"><i data-lucide="mail" class="w-5 h-5 text-slate-400 shrink-0"></i>villaespaiclinica@gmail.com</a></li>
+      </ul>
+      <div class="mt-6 flex gap-3">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-lg border border-slate-200 grid place-items-center hover:border-med-500 hover:text-med-600"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="w-10 h-10 rounded-lg border border-slate-200 grid place-items-center hover:border-med-500 hover:text-med-600"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+      </div>
+    </div>
+    <div class="rounded-2xl overflow-hidden border border-slate-100 min-h-[320px]">
+      <iframe title="Mapa Clínica Villaespai" src="https://maps.google.com/maps?q=Calle%20Villarroya%2044%2C%2046191%20Vilamarxant%2C%20Valencia&output=embed" class="w-full h-full min-h-[320px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-slate-100 py-8 text-center text-sm text-slate-400">© <span id="y"></span> Clínica Villaespai · Vilamarxant (Valencia)<p class="mt-2 text-xs">Desarrollado por <strong>Biofrutas</strong> · <a href="mailto:biofrutas.dev@gmail.com" class="hover:underline">biofrutas.dev@gmail.com</a> · <a href="https://github.com/biofrutas-dev" target="_blank" rel="noopener" class="hover:underline">github.com/biofrutas-dev</a></p></footer>
+
+<!-- Modal cita -->
+<div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/40 p-4" onclick="if(event.target===this)closeModal()">
+  <div class="bg-white rounded-2xl w-full max-w-md p-7 relative">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400" aria-label="Cerrar"><i data-lucide="x"></i></button>
+    <h3 class="text-xl font-bold text-slate-900">Solicitar cita</h3>
+    <p class="text-sm text-slate-500 mt-1">Te enviaremos a WhatsApp con tu solicitud preparada.</p>
+    <form id="citaForm" class="mt-6 space-y-4">
+      <input required name="nombre" placeholder="Nombre y apellidos" class="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-med-500">
+      <select name="esp" class="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-med-500"><option>Fisioterapia y Osteopatía</option><option>Podología</option><option>Nutrición</option><option>Logopedia</option><option>Psicología infanto-juvenil</option></select>
+      <select name="franja" class="w-full border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-med-500"><option>Mañana (10:00 – 14:00)</option><option>Tarde (martes y jueves, hasta 20:00)</option></select>
+      <button class="w-full bg-med-500 hover:bg-med-600 text-white font-semibold py-3 rounded-lg inline-flex justify-center items-center gap-2"><i data-lucide="message-square" class="w-5 h-5"></i>Enviar por WhatsApp</button>
+      <a href="tel:+34653487825" class="block text-center text-sm text-med-600 font-medium">o llama al 653 48 78 25</a>
+    </form>
+  </div>
+</div>
+
+<script>
+lucide.createIcons();
+document.getElementById('y').textContent=new Date().getFullYear();
+const m=document.getElementById('modal');
+function openModal(){m.classList.remove('hidden');m.classList.add('flex')}
+function closeModal(){m.classList.add('hidden');m.classList.remove('flex')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.getElementById('menuBtn').onclick=()=>{const n=document.getElementById('mobileNav');n.classList.toggle('hidden');n.classList.toggle('flex')};
+document.getElementById('citaForm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
+const t=`Hola, soy ${f.get('nombre')}. Me gustaría pedir cita en Clínica Villaespai para ${f.get('esp')}. Preferencia: ${f.get('franja')}.`;
+window.open('https://wa.me/34653487825?text='+encodeURIComponent(t),'_blank');closeModal()};
+</script>
+</body>
+</html>

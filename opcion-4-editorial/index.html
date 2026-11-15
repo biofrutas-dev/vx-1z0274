@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villaespai · Revista de salud · Clínica en Vilamarxant</title>
+<meta name="description" content="Clínica Villaespai en Vilamarxant: fisioterapia, podología, nutrición, logopedia con Adrián Quiles y psicología infanto-juvenil con Alejandra Oliván Pascual.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{serif:['Fraunces','serif'],sans:['"DM Sans"','sans-serif']},colors:{crema:'#f3ecdc',crema2:'#e8dec7',bosque:'#1f3a2c',bosque2:'#2c5440',ocre:'#c9963b'}}}}</script>
+<style>
+.flip{perspective:1200px}.flip-in{transition:transform .7s;transform-style:preserve-3d;position:relative;height:100%}
+.flip:hover .flip-in,.flip.on .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}.back{transform:rotateY(180deg)}
+</style>
+</head>
+<body class="font-sans bg-crema text-bosque antialiased">
+
+<header id="top" class="sticky top-0 z-40 bg-crema/95 backdrop-blur border-b-2 border-bosque">
+  <div class="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="#top" class="font-serif text-2xl font-black italic">Villaespai<span class="text-ocre">.</span></a>
+    <nav class="hidden md:flex gap-8 text-xs uppercase tracking-[0.2em] font-bold">
+      <a href="#especialidades" class="hover:text-ocre">Especialidades</a><a href="#equipo" class="hover:text-ocre">Equipo</a><a href="#agenda" class="hover:text-ocre">Agenda</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button onclick="openModal()" class="bg-bosque hover:bg-bosque2 text-crema text-xs uppercase tracking-[0.2em] font-bold px-5 py-3">Pedir cita</button>
+      <button id="menuBtn" class="md:hidden p-2" aria-label="Abrir menú"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="hidden md:hidden px-5 pb-4 flex-col gap-3 text-xs uppercase tracking-[0.2em] font-bold"><a href="#especialidades">Especialidades</a><a href="#equipo">Equipo</a><a href="#agenda">Agenda</a></nav>
+</header>
+
+<!-- Portada -->
+<section class="max-w-7xl mx-auto px-5 pt-10 pb-16">
+  <div class="flex justify-between text-xs uppercase tracking-[0.2em] font-bold border-b border-bosque/30 pb-3">
+    <span>Nº 01 · Edición Vilamarxant</span><span class="hidden sm:inline">Salud · Movimiento · Mente</span>
+  </div>
+  <div class="grid lg:grid-cols-12 gap-8 mt-8">
+    <div class="lg:col-span-7">
+      <h1 class="font-serif font-black text-[3.4rem] sm:text-[5.5rem] lg:text-[7.5rem] leading-[0.88] tracking-tight">Vivir<br><em class="font-normal text-bosque2">sin</em> dolor<br>es posible<span class="text-ocre">.</span></h1>
+      <p class="mt-8 text-lg max-w-lg leading-relaxed border-l-4 border-ocre pl-5">Cinco disciplinas, un mismo propósito: que recuperes tu bienestar. Bienvenido a la Clínica Villaespai, en el corazón de Vilamarxant.</p>
+    </div>
+    <div class="lg:col-span-5 relative">
+      <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=900&q=80" alt="Persona estirando en calma" class="w-full h-[460px] object-cover grayscale-[30%] bg-crema2">
+      <div class="absolute -bottom-6 left-4 right-4 sm:left-auto sm:-left-10 sm:right-auto bg-bosque text-crema p-6 max-w-xs">
+        <p class="font-serif italic text-xl leading-snug">«Tratamos personas, no solo síntomas.»</p>
+        <p class="text-xs uppercase tracking-[0.2em] mt-3 text-ocre font-bold">Equipo Villaespai</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Especialidades tarjetas flip -->
+<section id="especialidades" class="bg-bosque text-crema py-20 mt-10">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid md:grid-cols-12 gap-6 items-end">
+      <h2 class="md:col-span-7 font-serif text-5xl md:text-7xl font-black leading-none">El índice<br><em class="font-normal text-ocre">de tu salud</em></h2>
+      <p class="md:col-span-5 opacity-80">Pasa el cursor (o toca) cada tarjeta para descubrir qué incluye cada especialidad.</p>
+    </div>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-6 gap-5">
+      <div class="flip lg:col-span-3 h-72 cursor-pointer" onclick="this.classList.toggle('on')"><div class="flip-in">
+        <div class="face bg-crema text-bosque p-8 flex flex-col justify-between"><span class="font-serif text-6xl font-black text-ocre">01</span><h3 class="font-serif text-3xl font-bold">Fisioterapia<br>y Osteopatía</h3></div>
+        <div class="face back bg-ocre text-bosque p-8 flex flex-col justify-center"><ul class="space-y-2 text-lg font-medium"><li>— Diatermia</li><li>— Punción seca</li><li>— Activación del nervio peroneo</li><li>— Fisioterapia general y osteopatía</li></ul></div>
+      </div></div>
+      <div class="flip lg:col-span-3 h-72 cursor-pointer" onclick="this.classList.toggle('on')"><div class="flip-in">
+        <div class="face p-8 flex flex-col justify-between bg-cover bg-center" style="background-image:linear-gradient(rgba(31,58,44,.55),rgba(31,58,44,.85)),url('https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=800&q=80')"><span class="font-serif text-6xl font-black text-ocre">02</span><h3 class="font-serif text-3xl font-bold">Podología</h3></div>
+        <div class="face back bg-crema text-bosque p-8 flex flex-col justify-center"><ul class="space-y-2 font-medium"><li>— Estudio de la pisada</li><li>— Plataforma de presiones</li><li>— Plantillas personalizadas</li><li>— Reconstrucción de uña</li><li>— Cirugía MIS / fenol-alcohol (uña encarnada)</li></ul></div>
+      </div></div>
+      <div class="flip lg:col-span-2 h-72 cursor-pointer" onclick="this.classList.toggle('on')"><div class="flip-in">
+        <div class="face bg-bosque2 p-8 flex flex-col justify-between border border-crema/20"><span class="font-serif text-6xl font-black text-ocre">03</span><h3 class="font-serif text-3xl font-bold">Nutrición</h3></div>
+        <div class="face back bg-crema text-bosque p-8 flex flex-col justify-center"><ul class="space-y-2 text-lg font-medium"><li>— Dietas personalizadas</li><li>— Microbiota</li><li>— SIBO</li></ul></div>
+      </div></div>
+      <div class="flip lg:col-span-2 h-72 cursor-pointer" onclick="this.classList.toggle('on')"><div class="flip-in">
+        <div class="face bg-crema text-bosque p-8 flex flex-col justify-between"><span class="font-serif text-6xl font-black text-ocre">04</span><h3 class="font-serif text-3xl font-bold">Logopedia</h3></div>
+        <div class="face back bg-ocre text-bosque p-8 flex flex-col justify-center"><ul class="space-y-2 text-lg font-medium"><li>— Terapia miofuncional</li><li>— Habla y lenguaje</li></ul><p class="mt-4 font-serif italic">con Adrián Quiles</p></div>
+      </div></div>
+      <div class="flip sm:col-span-2 lg:col-span-2 h-72 cursor-pointer" onclick="this.classList.toggle('on')"><div class="flip-in">
+        <div class="face bg-bosque2 p-8 flex flex-col justify-between border border-crema/20"><span class="font-serif text-6xl font-black text-ocre">05</span><h3 class="font-serif text-3xl font-bold">Psicología</h3></div>
+        <div class="face back bg-crema text-bosque p-8 flex flex-col justify-center"><p class="text-lg font-medium">Psicología infanto-juvenil: emociones, conducta, autoestima y acompañamiento a familias.</p><p class="mt-4 font-serif italic">con Alejandra Oliván Pascual</p></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Equipo -->
+<section id="equipo" class="max-w-7xl mx-auto px-5 py-24">
+  <p class="text-xs uppercase tracking-[0.2em] font-bold text-ocre">Entrevista · Quiénes somos</p>
+  <h2 class="font-serif text-5xl md:text-6xl font-black mt-3">Las caras<br><em class="font-normal">detrás del cuidado</em></h2>
+  <div class="mt-14 grid md:grid-cols-2 gap-12">
+    <article class="grid sm:grid-cols-5 gap-6">
+      <div class="sm:col-span-2 aspect-[3/4] bg-bosque text-crema flex items-end p-5"><span class="font-serif text-7xl font-black italic leading-none">AQ</span></div>
+      <div class="sm:col-span-3"><p class="text-xs uppercase tracking-[0.2em] font-bold opacity-60">Logopedia</p><h3 class="font-serif text-3xl font-bold mt-1">Adrián Quiles</h3><p class="mt-4 leading-relaxed">Especialista en terapia miofuncional y trastornos del habla y del lenguaje. Trabaja con niños y adultos para mejorar la respiración, la deglución, la articulación y la comunicación en el día a día.</p><p class="font-serif italic text-xl mt-5 text-bosque2">«Comunicarse bien cambia la manera de estar en el mundo.»</p></div>
+    </article>
+    <article class="grid sm:grid-cols-5 gap-6 md:mt-24">
+      <div class="sm:col-span-2 aspect-[3/4] bg-ocre text-bosque flex items-end p-5"><span class="font-serif text-7xl font-black italic leading-none">AO</span></div>
+      <div class="sm:col-span-3"><p class="text-xs uppercase tracking-[0.2em] font-bold opacity-60">Psicología infanto-juvenil</p><h3 class="font-serif text-3xl font-bold mt-1">Alejandra Oliván Pascual</h3><p class="mt-4 leading-relaxed">Acompaña a niños, niñas y adolescentes en la gestión emocional, la ansiedad, la conducta y las dificultades escolares, siempre de la mano de las familias.</p><p class="font-serif italic text-xl mt-5 text-bosque2">«Cada niño necesita sentirse escuchado para crecer seguro.»</p></div>
+    </article>
+  </div>
+  <p class="mt-14 border-t border-bosque/30 pt-6 max-w-3xl">Junto a ellos, nuestro equipo de <strong>fisioterapia, osteopatía, podología y nutrición</strong> trabaja de forma coordinada para ofrecerte un plan completo.</p>
+</section>
+
+<!-- Agenda -->
+<section id="agenda" class="bg-crema2 py-20">
+  <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <h2 class="font-serif text-5xl font-black">Agenda<span class="text-ocre">.</span></h2>
+      <table class="mt-8 w-full text-left">
+        <tr class="border-b border-bosque/20"><td class="py-3 font-bold">Lunes, miércoles y viernes</td><td class="py-3 text-right font-serif text-xl">10:00 – 14:00</td></tr>
+        <tr class="border-b border-bosque/20"><td class="py-3 font-bold">Martes y jueves</td><td class="py-3 text-right font-serif text-xl">10:00 – 20:00</td></tr>
+        <tr><td class="py-3 font-bold opacity-50">Sábados y domingos</td><td class="py-3 text-right font-serif italic text-xl opacity-50">Cerrado</td></tr>
+      </table>
+      <div class="mt-10 space-y-3">
+        <p class="flex gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-ocre shrink-0"></i>C/ Villarroya, 44, Bajo, 46191 Vilamarxant (Valencia)</p>
+        <a href="tel:+34653487825" class="flex gap-3 hover:text-ocre"><i data-lucide="phone" class="w-5 h-5 text-ocre"></i>+34 653 48 78 25</a>
+        <a href="https://wa.me/34653487825" target="_blank" rel="noopener" class="flex gap-3 hover:text-ocre"><i data-lucide="message-circle" class="w-5 h-5 text-ocre"></i>Cita previa por WhatsApp</a>
+        <a href="mailto:villaespaiclinica@gmail.com" class="flex gap-3 hover:text-ocre break-all"><i data-lucide="mail" class="w-5 h-5 text-ocre shrink-0"></i>villaespaiclinica@gmail.com</a>
+      </div>
+      <div class="mt-8 flex gap-3">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="border-2 border-bosque px-4 py-2 text-xs uppercase tracking-[0.2em] font-bold hover:bg-bosque hover:text-crema inline-flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i>Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="border-2 border-bosque px-4 py-2 text-xs uppercase tracking-[0.2em] font-bold hover:bg-bosque hover:text-crema inline-flex items-center gap-2"><i data-lucide="facebook" class="w-4 h-4"></i>Facebook</a>
+      </div>
+    </div>
+    <div class="lg:col-span-7 border-2 border-bosque min-h-[380px]">
+      <iframe title="Mapa Clínica Villaespai" src="https://maps.google.com/maps?q=Calle%20Villarroya%2044%2C%2046191%20Vilamarxant%2C%20Valencia&output=embed" class="w-full h-full min-h-[380px] sepia-[.3]" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-bosque text-crema py-10">
+  <div class="max-w-7xl mx-auto px-5 flex flex-col sm:flex-row justify-between gap-4 items-center">
+    <span class="font-serif text-3xl font-black italic">Villaespai<span class="text-ocre">.</span></span>
+    <span class="text-xs uppercase tracking-[0.2em]">© <span id="y"></span> Clínica Villaespai · Vilamarxant</span>
+  </div>
+  <p class="max-w-7xl mx-auto px-5 mt-6 text-xs opacity-70 text-center sm:text-right">Desarrollado por <strong>Biofrutas</strong> · <a href="mailto:biofrutas.dev@gmail.com" class="hover:text-ocre">biofrutas.dev@gmail.com</a> · <a href="https://github.com/biofrutas-dev" target="_blank" rel="noopener" class="hover:text-ocre">github.com/biofrutas-dev</a></p>
+</footer>
+
+<div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-bosque/70 p-4" onclick="if(event.target===this)closeModal()">
+  <div class="bg-crema w-full max-w-md p-8 relative border-t-8 border-ocre">
+    <button onclick="closeModal()" class="absolute top-4 right-4" aria-label="Cerrar"><i data-lucide="x"></i></button>
+    <h3 class="font-serif text-3xl font-black">Pide tu cita<span class="text-ocre">.</span></h3>
+    <form id="citaForm" class="mt-6 space-y-4">
+      <input required name="nombre" placeholder="Nombre y apellidos" class="w-full bg-transparent border-b-2 border-bosque py-2 outline-none placeholder:text-bosque/50">
+      <select name="esp" class="w-full bg-transparent border-b-2 border-bosque py-2 outline-none"><option>Fisioterapia y Osteopatía</option><option>Podología</option><option>Nutrición</option><option>Logopedia · Adrián Quiles</option><option>Psicología · Alejandra Oliván Pascual</option></select>
+      <button class="w-full bg-bosque hover:bg-bosque2 text-crema text-xs uppercase tracking-[0.2em] font-bold py-4 mt-2">Enviar por WhatsApp</button>
+      <a href="tel:+34653487825" class="block text-center text-sm font-bold">o llámanos: 653 48 78 25</a>
+    </form>
+  </div>
+</div>
+
+<script>
+lucide.createIcons();
+document.getElementById('y').textContent=new Date().getFullYear();
+const m=document.getElementById('modal');
+function openModal(){m.classList.remove('hidden');m.classList.add('flex')}
+function closeModal(){m.classList.add('hidden');m.classList.remove('flex')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.getElementById('menuBtn').onclick=()=>{const n=document.getElementById('mobileNav');n.classList.toggle('hidden');n.classList.toggle('flex')};
+document.getElementById('citaForm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
+const t=`Hola, soy ${f.get('nombre')}. Me gustaría pedir cita de ${f.get('esp')} en Clínica Villaespai.`;
+window.open('https://wa.me/34653487825?text='+encodeURIComponent(t),'_blank');closeModal()};
+</script>
+</body>
+</html>
